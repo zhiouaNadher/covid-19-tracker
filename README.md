@@ -186,10 +186,6 @@ NB : If the patient does not exist, we create a new patient
 
 To run tests, run at project startup
 
-```bash
-  npm run test
-```
-
 
 ## Author
 
