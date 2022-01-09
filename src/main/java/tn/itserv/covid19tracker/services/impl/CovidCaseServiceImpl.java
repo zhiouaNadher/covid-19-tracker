@@ -120,6 +120,25 @@ public class CovidCaseServiceImpl implements CovidCaseService {
 		}
 		return null;
 	}
+
+	@Override
+	public List<Object[]> findAllDay() {
+		// TODO Auto-generated method stub
+		return covidTestRepository.findAllCovidCasesDay();
+	}
+	
+	
+	@Override
+	public List<Object[]> findAllMouth() {
+		// TODO Auto-generated method stub
+		return covidTestRepository.findAllCovidCasesMouth();
+	}
+	
+	@Override
+	public List<Object[]> findAllYear() {
+		// TODO Auto-generated method stub
+		return covidTestRepository.findAllCovidCasesYear();
+	}
  
 
 }

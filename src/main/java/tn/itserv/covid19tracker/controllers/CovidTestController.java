@@ -28,19 +28,5 @@ public class CovidTestController {
 		return covidTestService.findAll(PageRequest.of(page, size));
 	}
 
-	@PostMapping("/{id}")
-	public void update(@RequestBody CovidTest p, @PathVariable() Long id) {
-		System.out.println("**** " + id);
-		try {
-			covidTestService.update(p, id);
-		} catch (Exception ex) {
-			System.out.println(" ------- nnn");
-		}
-	}
-
-	@PostMapping("/delete/{id}")
-	public void delete(@PathVariable() Long id) {
-		System.out.println("**** " + id);
-		
-	}
+	
 }

@@ -1,5 +1,7 @@
 package tn.itserv.covid19tracker.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -45,6 +47,21 @@ public class CovidCaseController {
 	@GetMapping("/list")
 	public Page<CovidCaseDto> findAll(Pageable pageable) {
 		return covidCaseService.findAll(pageable);
+	}
+
+	@GetMapping("/day")
+	public List<Object[]> findAllDay() {
+		return covidCaseService.findAllDay();
+	}
+
+	@GetMapping("/mouth")
+	public List<Object[]> findAllMouth() {
+		return covidCaseService.findAllMouth();
+	}
+
+	@GetMapping("/year")
+	public List<Object[]> findAllYear() {
+		return covidCaseService.findAllYear();
 	}
 
 }
